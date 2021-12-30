@@ -5,6 +5,17 @@ tf_infra_repos = {
     strict         = true
     build_checks   = ["terraform / ci"]
   }
+
+  tf-infra-stg = {
+    modules = [
+      "base",
+      "k8s",
+    ]
+
+    default_branch = "main"
+    strict         = true
+    build_checks   = ["terraform / ci"]
+  }
 }
 
 tf_module_repos = {
