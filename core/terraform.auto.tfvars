@@ -7,7 +7,14 @@ tf_infra_repos = {
   }
 }
 
-tf_module_repos = {}
+tf_module_repos = {
+  tf-env = {
+    modules        = []
+    default_branch = "main"
+    strict         = true
+    build_checks   = ["terraform / ci"]
+  }
+}
 
 misc_repos = {
   cicd = {
