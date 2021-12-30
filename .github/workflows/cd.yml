@@ -1,0 +1,17 @@
+name: 'cd'
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  core:
+    name: 'terraform'
+    uses: bootstrapper-demo-org/cicd/.github/workflows/tf_infra_cd.yml@main
+    with:
+      workdir: core
+    secrets:
+      tf_api_token: ${{ secrets.TF_API_TOKEN }}
+      gh_owner: ${{ secrets.GH_OWNER }}
+      gh_token: ${{ secrets.GH_TOKEN }}
