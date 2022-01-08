@@ -34,6 +34,20 @@ misc_repos = {
     strict         = true
     build_checks   = []
   }
+
+  k8s-apps-stg = {
+    modules        = []
+    default_branch = "main"
+    strict         = true
+    build_checks   = []
+  }
+
+  k8s-infra = {
+    modules        = []
+    default_branch = "main"
+    strict         = true
+    build_checks   = []
+  }
 }
 
 tfc_organization = "bootstrapper-demo"
